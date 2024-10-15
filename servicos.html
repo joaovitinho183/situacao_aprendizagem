@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" href="/img/logoVQsemfundo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>VQ || Serviços</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="areas">
+            <img src="/img/logoVQsemfundo.png" alt="" width="45px">
+        </div>
+        <div class="areas">
+            <nav class="navegacao">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="banco.html">BancoDados</a>
+                <a href="algoritnos.html">Algoritmos</a>
+                <a href="componentes.html">Componentes</a>
+                <a href="contatos.html">Contato</a>
+            </nav>
+        </div>
+        <div class="areas"></div>
+    </header>
+    <main class="principal">
+        <div class="conteudo">
+            <h1>
+                Elementos e Componentes da Rede Interna
+            </h1>
+            
+                <h2>Servidor Web</h2>
+            <pre>Função: Hospeda sites e responde a requisições.
+                Configuração: Roda software como Apache ou Nginx.
+                </pre>
+            
+                <h2>Roteador</h2>
+            <pre>Função: Conecta a rede interna à internet.
+                Configuração: Gerencia o tráfego e a segurança (firewall).</pre>
+            
+                <h2>Switch</h2>
+            <pre>Função: Conecta dispositivos dentro da rede local.
+                Configuração: Distribui dados entre os dispositivos</pre>
+            
+                <h2>Firewall</h2>
+            <pre>Função: Protege a rede contra acessos não autorizados.
+                Configuração: Define regras de bloqueio e permissão de tráfego.
+                </pre>
+            
+                <h2>Dispositivos de Clientes</h2>
+            <pre>Função: PCs, laptops e dispositivos móveis que acessam o servidor.</pre>
+            
+                <h2>Access Point (AP)</h2>
+            <pre>Função: Expande a rede sem fio.
+                Configuração: Conecta dispositivos móveis à rede.</pre>
+
+                <h2>Topologia da Rede</h2>
+            <pre>Modelo: Normalmente em estrela, com o roteador no centro.</pre>
+                   
+                <h2>Configuração da Rede</h2>
+            <pre>Endereçamento IP: Cada dispositivo deve ter um IP único, preferencialmente atribuído pelo DHCP.
+                Servidor Web: Configurado com IP estático e portas abertas (80 para HTTP, 443 para HTTPS).
+                Firewall: Permitir tráfego do servidor web e bloquear portas desnecessárias.
+                </pre>
+            
+                <h2>Segurança</h2>
+            <pre>Atualizações: Manter software e dispositivos atualizados.
+                Monitoramento: Usar ferramentas para detectar atividades suspeitas.
+                Backups: Fazer backups regulares dos dados do servidor</pre>
+            
+        <h1>Passos para Configuração</h1>
+            
+                <h2>1. Configuração do Servidor DNS</h2>
+            <pre>Adicionar um Servidor DNS:
+                No Packet Tracer, adicione um servidor (Server) à sua rede.
+                Configurar o Servidor DNS:
+                Clique no servidor adicionado e vá para a aba Config.
+                Selecione DNS.
+                Ative o serviço DNS.
+                Adicione um novo registro:
+                Host: Nome do domínio (ex.: www.exemplo.com)
+                IP Address: Endereço IP do servidor web (ex.: 192.168.1.10)
+                Exemplo:
+                Host: www.exemplo.com
+                IP Address: 192.168.1.10
+            </pre>
+            
+            <h2>2. Configuração do Servidor HTTP</h2>
+            <pre>Adicionar um Servidor HTTP:
+                Se ainda não o fez, adicione outro servidor na rede (ou use o mesmo servidor, se preferir).
+                Configurar o Servidor HTTP:
+                Clique no servidor e vá para a aba Config.
+                Selecione HTTP.
+                Ative o serviço HTTP.
+                Adicione uma página web:
+                Na seção Web Page, você pode editar o conteúdo da página inicial (ex.: "Bem-vindo ao meu site!").
+                </pre>
+            
+            <h2>3. Configuração do Roteador</h2>
+            <pre>Se você estiver usando um roteador na rede:
+                Vá para a aba Config do roteador.
+                Adicione uma interface VLAN (se aplicável) e configure o endereço IP da interface que se conecta ao servidor.
+                Exemplo:
+                Interface: GigabitEthernet0/0
+                IP Address: 192.168.1.1
+                Subnet Mask: 255.255.255.0
+                </pre>
+            
+            <h2>4. Configuração do Cliente</h2>
+            <pre>Adicionar um PC Cliente:
+                Adicione um PC na rede.
+                Configure o endereço IP do PC na mesma sub-rede do servidor DNS e HTTP.
+                Exemplo:
+                IP Address: 192.168.1.20
+                Subnet Mask: 255.255.255.0
+                Default Gateway: 192.168.1.1 (endereço do roteador)
+                Configuração do DNS no PC:
+                Vá para a aba Desktop e clique em IP Configuration.
+                Adicione o endereço IP do servidor DNS no campo DNS Server.</pre>
+
+        <h1>Roteador</h1>
+                <pre>Função: Conecta diferentes redes, como uma rede local (LAN) à internet, e encaminha pacotes de dados entre elas.
+                    Configuração:
+                    Interface: Configuração de endereços IP nas interfaces.
+                    Protocolos de Roteamento: Ativar protocolos como OSPF ou EIGRP.
+                    Regras de Segurança: Configurar o firewall para permitir ou bloquear tráfego específico.</pre>
+        <h1>Switch</h1>
+                <pre>Função: Conecta dispositivos em uma rede local, permitindo que eles se comuniquem entre si.
+                    Configuração:
+                    VLANs: Criar VLANs para segmentar a rede em grupos de trabalho.
+                    Endereçamento MAC: O switch aprende e armazena endereços MAC dos dispositivos conectados para encaminhar pacotes de forma eficiente.</pre>
+        <h1>Firewall</h1>
+                <pre>Função: Protege a rede de acessos não autorizados e ataques, monitorando o tráfego de entrada e saída.
+                    Configuração:
+                    Regras de Acesso: Definir políticas de segurança para permitir ou bloquear tráfego em portas específicas.
+                    Monitoramento: Ativar logs para registrar tentativas de acesso.
+                    </pre>
+        <h1>Servidor DNS</h1>
+                <pre>Função: Traduz nomes de domínio em endereços IP, facilitando o acesso a recursos na rede.
+                    Configuração:
+                    Registros DNS: Adicionar registros A, CNAME, e MX para gerenciar domínios e serviços associados.
+                    TTL (Time to Live): Configurar o tempo que os registros ficam armazenados em cache.
+                    </pre>
+        <h1>Servidor HTTP</h1>
+                <pre>Função: Hospeda páginas web e responde a requisições de clientes, entregando conteúdos da web.
+                    Configuração:
+                    Software: Instalar e configurar servidores web como Apache ou Nginx.
+                    Portas: Garantir que as portas 80 (HTTP) e 443 (HTTPS) estejam abertas e configuradas.
+                    Certificados SSL: Instalar certificados para habilitar HTTPS.
+                    </pre>
+        <h1>Access Point (AP)</h1>
+                <pre>Função: Extende a rede sem fio, permitindo que dispositivos móveis se conectem à rede local.
+                    Configuração:
+                    SSID: Configurar o nome da rede sem fio.
+                    Segurança: Ativar WPA2/WPA3 para proteção da rede.
+                    Canal de Frequência: Selecionar canais apropriados para minimizar interferências.
+                    </pre>
+        <h1>Modem</h1>
+                <pre>Função: Converte sinais digitais de um roteador para sinais analógicos para transmissão pela linha telefônica ou cabo, e vice-versa.
+                    Configuração:
+                    Provedor de Serviços: Configurar com as credenciais fornecidas pelo ISP (Internet Service Provider).
+                    Endereço IP: Verificar se o modem está atribuindo um IP ao roteador.</pre>
+        <h1>PCs e Dispositivos de Rede</h1>
+                <pre>Função: Terminais que acessam a rede e utilizam recursos compartilhados.
+                    Configuração:
+                    Endereço IP: Atribuir um endereço IP estático ou dinâmico via DHCP.
+                    DNS: Configurar o servidor DNS para resolução de nomes.</pre>
+        </div>
+    </main>
+    <footer class="rodape">
+        &copy; 2024 VisualQuart.  Todos os direitos reservados.
+    </footer>
+</body>
+</html>

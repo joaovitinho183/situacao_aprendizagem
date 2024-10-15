@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" href="/img/logoVQsemfundo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>VQ || Algoritmos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="areas">
+            <img src="/img/logoVQsemfundo.png" alt="" width="45px">
+        </div>
+        <div class="areas">
+            <nav class="navegacao">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="banco.html">BancoDados</a>
+                <a href="algoritnos.html">Algoritmos</a>
+                <a href="componentes.html">Componentes</a>
+                <a href="contatos.html">Contato</a>
+            </nav>
+        </div>
+        <div class="areas"></div>
+    </header>
+    <main class="principal">
+        <div class="conteudo">
+            <pre>1. Fluxogramas de Algoritmos
+                Exemplo 1: Algoritmo de Soma de Números
+                plaintext
+                Copiar código
+                Início
+                   |
+                   v
+                Receber número n
+                   |
+                   v
+                Inicializar soma = 0
+                   |
+                   v
+                Para i de 1 até n
+                   |
+                   v
+                   soma = soma + i
+                   |
+                   v
+                Retornar soma
+                   |
+                   v
+                Fim
+                
+                Exemplo 2: Algoritmo de Verificação de Par
+                plaintext
+                Copiar código
+                Início
+                   |
+                   v
+                Receber número n
+                   |
+                   v
+                Se n % 2 == 0
+                   |
+                   v
+                   Retornar "É par"
+                   |
+                   v
+                Senão
+                   |
+                   v
+                   Retornar "É ímpar"
+                   |
+                   v
+                Fim
+                
+                Exemplo 3: Algoritmo de Fatorial
+                plaintext
+                Copiar código
+                Início
+                   |
+                   v
+                Receber número n
+                   |
+                   v
+                Se n == 0
+                   |
+                   v
+                   Retornar 1
+                   |
+                   v
+                Inicializar fatorial = 1
+                   |
+                   v
+                Para i de 1 até n
+                   |
+                   v
+                   fatorial = fatorial * i
+                   |
+                   v
+                Retornar fatorial
+                   |
+                   v
+                Fim
+                
+                
+                2. Programas Implementados em JavaScript
+                Exemplo 1: Soma de Números
+                javascript
+                Copiar código
+                function soma(n) {
+                    let soma = 0;
+                    for (let i = 1; i <= n; i++) {
+                        soma += i;
+                    }
+                    return soma;
+                }
+                console.log(soma(5)); // Saída: 15
+                
+                Exemplo 2: Verificação de Par
+                javascript
+                Copiar código
+                function verificarPar(n) {
+                    if (n % 2 === 0) {
+                        return "É par";
+                    } else {
+                        return "É ímpar";
+                    }
+                }
+                console.log(verificarPar(4)); // Saída: É par
+                
+                Exemplo 3: Cálculo de Fatorial
+                javascript
+                Copiar código
+                function fatorial(n) {
+                    if (n === 0) return 1;
+                    let resultado = 1;
+                    for (let i = 1; i <= n; i++) {
+                        resultado *= i;
+                    }
+                    return resultado;
+                }
+                console.log(fatorial(5)); // Saída: 120
+                
+                
+                3. Programas de Ordenação Implementados em JavaScript
+                Exemplo 1: Bubble Sort
+                javascript
+                Copiar código
+                function bubbleSort(arr) {
+                    let n = arr.length;
+                    for (let i = 0; i < n - 1; i++) {
+                        for (let j = 0; j < n - i - 1; j++) {
+                            if (arr[j] > arr[j + 1]) {
+                                // Troca
+                                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                            }
+                        }
+                    }
+                    return arr;
+                }
+                console.log(bubbleSort([64, 34, 25, 12, 22, 11, 90])); // Saída: [11, 12, 22, 25, 34, 64, 90]
+                
+                Exemplo 2: Selection Sort
+                javascript
+                Copiar código
+                function selectionSort(arr) {
+                    let n = arr.length;
+                    for (let i = 0; i < n - 1; i++) {
+                        let minIdx = i;
+                        for (let j = i + 1; j < n; j++) {
+                            if (arr[j] < arr[minIdx]) {
+                                minIdx = j;
+                            }
+                        }
+                        // Troca
+                        [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+                    }
+                    return arr;
+                }
+                console.log(selectionSort([64, 25, 12, 22, 11])); // Saída: [11, 12, 22, 25, 64]
+                
+                Exemplo 3: Insertion Sort
+                javascript
+                Copiar código
+                function insertionSort(arr) {
+                    let n = arr.length;
+                    for (let i = 1; i < n; i++) {
+                        let key = arr[i];
+                        let j = i - 1;
+                        while (j >= 0 && arr[j] > key) {
+                            arr[j + 1] = arr[j];
+                            j--;
+                        }
+                        arr[j + 1] = key;
+                    }
+                    return arr;
+                }
+                console.log(insertionSort([12, 11, 13, 5, 6])); // Saída: [5, 6, 11, 12, 13]
+                
+                </pre>
+        </div>
+    </main>
+    <footer class="rodape">
+        &copy; 2024 VisualQuart.  Todos os direitos reservados.
+    </footer>
+</body>
+</html>
